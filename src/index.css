@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+    --primary-muted: 221 83% 95%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 142 76% 36%;
+    --accent-foreground: 210 40% 98%;
+    --success: 142 76% 36%;
+    --success-foreground: 210 40% 98%;
+    --success-muted: 142 52% 96%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --destructive-muted: 0 93% 94%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 48 96% 89%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 83% 53%;
+    --task-pending: 215.4 16.3% 46.9%;
+    --task-completed: 142 76% 36%;
+    --task-overdue: 0 84% 60%;
+    --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%), hsl(156, 83%, 63%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%));
+    --gradient-background: linear-gradient(180deg, hsl(142, 76%, 36%), hsl(0, 0%, 100%));
+    --shadow-soft: 0 2px 8px -2px hsl(221 83% 53% / 0.08);
+    --shadow-medium: 0 4px 16px -4px hsl(221 83% 53% / 0.12);
+    --shadow-task: 0 1px 3px hsl(221 83% 53% / 0.06);
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --radius: 1rem; /* more rounded corners */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    --filter-background: 144 30% 90%;
+    --filter-border: 144 20% 60%;
+    --filter-text: 144 20% 20%;
+    --filter-hover: 144 30% 85%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+    --primary-muted: 221 83% 15%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 98%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+    --success-muted: 142 76% 15%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --destructive-muted: 0 62.8% 15%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 48 96% 89%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 221 83% 53%;
+    --task-pending: 240 5% 64.9%;
+    --task-completed: 142 76% 36%;
+    --task-overdue: 0 84% 60%;
+    --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%), hsl(260, 60%, 30%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%));
+    --gradient-background: linear-gradient(180deg, hsl(260, 80%, 50%), hsl(240, 10%, 3.9%));
+    --shadow-soft: 0 2px 8px -2px hsl(0 0% 0% / 0.2);
+    --shadow-medium: 0 4px 16px -4px hsl(0 0% 0% / 0.3);
+    --shadow-task: 0 1px 3px hsl(0 0% 0% / 0.15);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    --filter-background: 265 20% 15%;
+    --filter-border: 265 15% 35%;
+    --filter-text: 265 25% 85%;
+    --filter-hover: 265 20% 20%;
+  }
+}
+
+@layer components {
+  /* Dark background and light text for active sidebar button in light mode */
+  :root:not(.dark) .sidebar-active-light {
+    background-color: hsl(159, 25%, 36%) !important; /* dark gray */
+    color: hsl(0, 0%, 98%) !important; /* near white */
+  }
+  :root:not(.dark) .sidebar-active-light:hover {
+    background-color: hsl(0, 0%, 30%) !important; /* lighter on hover */
+  }
+}
+
+.filter-box {
+  @apply border border-input bg-background text-sm rounded-xl px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-ring dark:bg-muted dark:border-muted-foreground transition-all;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Gradient background for sidebar */
+.bg-sidebar-gradient {
+  background-image: linear-gradient(180deg, #4f46e5, #4338ca);
+}
+
+/* Custom scrollbar appearance */
+.kimi-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.kimi-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+.kimi-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Button hover semi-transparent */
+button:hover.bg-white\/20 {
+  background-color: rgba(255, 255, 255, 0.2);
+}
