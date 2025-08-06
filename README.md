@@ -77,7 +77,7 @@ src/
 
 ```bash
 # Clone
-git clone https://github.com/<your-username>/todo-app.git
+git clone https://github.com//m-umer-mustafa/todo-app/
 cd todo-app
 
 # Install
@@ -120,3 +120,4 @@ Edit `src/styles/globals.css` → `:root` or `.dark` variables to change colors,
 ## 📄 License
 
 MIT © 2024 Muhammad Omer Mustafa
+
