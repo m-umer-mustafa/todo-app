@@ -120,4 +120,3 @@ Edit `src/styles/globals.css` → `:root` or `.dark` variables to change colors,
 ## 📄 License
 
 MIT © 2024 Muhammad Omer Mustafa
-```
