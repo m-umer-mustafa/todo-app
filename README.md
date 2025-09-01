@@ -22,6 +22,32 @@
 
 ---
 
+
+## Getting Started
+
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+
+*   [Node.js](https://nodejs.org/en/) (v18.x or later)
+*   [Bun](https://bun.sh/) (or npm/yarn)
+
+### Installation
+
+1.  Clone the repo
+    ```sh
+    git clone https://github.com/m-umer-mustafa/todo-app.git
+    ```
+2.  Install packages
+    ```sh
+    npm install
+    ```
+3.  Start the development server
+    ```sh
+    npm run dev
+    ```
+
+
 ## 📁 Directory Overview
 
 
@@ -120,4 +146,5 @@ Edit `src/styles/globals.css` → `:root` or `.dark` variables to change colors,
 ## 📄 License
 
 MIT © 2024 Muhammad Omer Mustafa
+
 
